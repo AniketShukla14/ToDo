@@ -1,3 +1,11 @@
+{% if request.user.is_authenticated %}
+<p> {{request.user}}</p>
+<a href="">Logout</a>
+{% else %}
+<a href="">login</a>
+{%endif%}
+
+<hr>
 <h1>ToDo List</h1>
 <a href="{% url 'task-create' %}"> Add Task</a>
 
